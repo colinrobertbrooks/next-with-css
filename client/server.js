@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const next = require('next');
 
@@ -9,6 +10,8 @@ app
   .prepare()
   .then(() => {
     const server = express();
+
+    server.use('/static', express.static(path.join(__dirname, '.next/static')));
 
     server.get('*', (req, res) => {
       return handle(req, res);
