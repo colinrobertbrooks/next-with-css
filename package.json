@@ -1,0 +1,25 @@
+{
+  "name": "next-with-css",
+  "description": "next app with next-css",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node client/server.js",
+    "build": "next build client",
+    "start": "set NODE_ENV=production&& node client/server.js",
+    "api": "json-server --watch api.json --port 3001"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^0.1.1",
+    "express": "^4.16.2",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "engines": {
+    "node": "8.9.3",
+    "npm": "5.5.1"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
